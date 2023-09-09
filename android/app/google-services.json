@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "178231929016",
+    "project_id": "kce-campus-contact",
+    "storage_bucket": "kce-campus-contact.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178231929016:android:1832258dfe1b6c253f6c4d",
+        "android_client_info": {
+          "package_name": "com.example.kce_campus_connect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178231929016-bl69iuksrtl5bbe235gicuoa892se7bq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT-0DtruXauKX3MC-J93Wj1tTswRto-BY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178231929016-bl69iuksrtl5bbe235gicuoa892se7bq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "178231929016-90d3rvqla5pu7n900npq2o4np0ng8fc3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.kceCampusConnect"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178231929016:android:c00c901a78904d7d3f6c4d",
+        "android_client_info": {
+          "package_name": "com.kce.campus.connect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178231929016-bl69iuksrtl5bbe235gicuoa892se7bq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT-0DtruXauKX3MC-J93Wj1tTswRto-BY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178231929016-bl69iuksrtl5bbe235gicuoa892se7bq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "178231929016-90d3rvqla5pu7n900npq2o4np0ng8fc3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.kceCampusConnect"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
