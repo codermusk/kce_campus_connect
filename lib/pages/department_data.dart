@@ -7,22 +7,25 @@ class DepartmentData extends StatelessWidget {
   const DepartmentData({super.key});
 
   Widget _button(String data, VoidCallback onPressed) {
-    return SizedBox(
-        height: 130,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ElevatedButton(
-            onPressed: onPressed,
-            style: ElevatedButton.styleFrom(
-                primary: Colors.blue,
-                shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)))),
-            child: Text(
-              data,
-              style: const TextStyle(color: Colors.black, fontSize: 20),
+    return Padding(
+      padding: const EdgeInsets.only(left: 15, right: 15),
+      child: SizedBox(
+          height: 120,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              onPressed: onPressed,
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.cyan,
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10)))),
+              child: Text(
+                data,
+                style: const TextStyle(color: Colors.white, fontSize: 20),
+              ),
             ),
-          ),
-        ));
+          )),
+    );
   }
 
   @override
@@ -31,10 +34,12 @@ class DepartmentData extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(departmentName),
+        title: Text(departmentName,
+        ),
       ),
       body: ListView(
         children: [
+          const SizedBox(height: 20.0,),
           _button('HOD', () => Navigator.of(context).pushNamed('')),
           const SizedBox(height: 30.0),
           _button('TEACHING STAFFS', () => Navigator.of(context).pushNamed('')),

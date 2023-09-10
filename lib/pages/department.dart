@@ -38,9 +38,9 @@ class department extends StatelessWidget {
           itemBuilder: (context, index) {
             String data = snapshot.data![index];
             return Padding(
-              padding: const EdgeInsets.all(14.0),
+              padding: const EdgeInsets.all(20.0),
               child: SizedBox(
-                height: 80,
+                height: 100,
                 child: ElevatedButton(
                   onPressed: () => Navigator.of(context).pushNamed(DepartmentData.route, arguments: data),
                   style: ElevatedButton.styleFrom(
