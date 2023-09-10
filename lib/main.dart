@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:kce_campus_connect/pages/department.dart';
+import 'package:kce_campus_connect/pages/department_data.dart';
 import 'firebase_options.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -25,6 +25,10 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: const MyHomePage(title: 'Departments'),
+      routes: {
+        department.route: (ctx) => department(),
+        DepartmentData.route: (ctx) => DepartmentData()
+      },
     );
   }
 }
@@ -46,6 +50,8 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Center(child: Text(widget.title)),
         ),
-        body: Center(child: department()));
+        body: Center(child: department()),
+
+    );
   }
 }

@@ -1,8 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:kce_campus_connect/pages/department_data.dart';
 
 class department extends StatelessWidget {
   const department({super.key});
+  static const route = '/department';
 
   Future<List<String>> fetchData() async {
     List<String> dataList = [];
@@ -10,7 +12,6 @@ class department extends StatelessWidget {
         await FirebaseFirestore.instance.collection('/department/').get();
 
     querySnapshot.docs.forEach((doc) {
-      print(doc.id);
       dataList.add(doc.id);
     });
 
@@ -41,7 +42,7 @@ class department extends StatelessWidget {
               child: SizedBox(
                 height: 80,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Navigator.of(context).pushNamed(DepartmentData.route, arguments: data),
                   style: ElevatedButton.styleFrom(
                       primary: Colors.white24,
                       shape: const RoundedRectangleBorder(
