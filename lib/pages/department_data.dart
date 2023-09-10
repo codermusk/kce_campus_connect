@@ -13,14 +13,14 @@ class DepartmentData extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: ElevatedButton(
             onPressed: onPressed,
-            child: Text(
-              data,
-              style: TextStyle(color: Colors.black, fontSize: 20),
-            ),
             style: ElevatedButton.styleFrom(
                 primary: Colors.blue,
                 shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10)))),
+            child: Text(
+              data,
+              style: TextStyle(color: Colors.black, fontSize: 20),
+            ),
           ),
         ));
   }
@@ -36,12 +36,12 @@ class DepartmentData extends StatelessWidget {
       body: ListView(
         children: [
           _button('HOD', () => Navigator.of(context).pushNamed('')),
-          SizedBox(height: 30.0),
+          const SizedBox(height: 30.0),
           _button('TEACHING STAFFS', () => Navigator.of(context).pushNamed('')),
-          SizedBox(height: 30.0),
+          const SizedBox(height: 30.0),
           _button(
               'NON TEACHING STAFFS', () => Navigator.of(context).pushNamed('')),
-          SizedBox(height: 30.0),
+          const SizedBox(height: 30.0),
           _button('CLASS', () => Navigator.of(context).pushNamed(''))
         ],
       ),
