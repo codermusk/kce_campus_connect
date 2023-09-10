@@ -19,7 +19,7 @@ class DepartmentData extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(10)))),
             child: Text(
               data,
-              style: TextStyle(color: Colors.black, fontSize: 20),
+              style: const TextStyle(color: Colors.black, fontSize: 20),
             ),
           ),
         ));
