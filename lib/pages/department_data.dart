@@ -33,6 +33,7 @@ class DepartmentData extends StatelessWidget {
     final departmentName = ModalRoute.of(context)?.settings.arguments as String;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.cyan,
         centerTitle: true,
         title: Text(departmentName,
         ),
