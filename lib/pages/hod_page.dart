@@ -44,7 +44,7 @@ class Hod extends StatelessWidget {
                 return Text('Error: ${snapshot.error}');
               }
               if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                return const Text('No data available'); // Handle empty data
+                return Center(child: const Text('No data available')); // Handle empty data
               }
               return Padding(
                 padding: const EdgeInsets.all(8.0),

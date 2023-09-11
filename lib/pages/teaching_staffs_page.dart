@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:kce_campus_connect/pages/staffs_details_page.dart';
 
 class TeachingStaffsPage extends StatelessWidget {
   const TeachingStaffsPage({super.key});
@@ -52,7 +53,9 @@ class TeachingStaffsPage extends StatelessWidget {
                   child: SizedBox(
                     height: 100,
                     child: ElevatedButton(
-                      onPressed: () => Navigator.of(context).pushNamed(''),
+                      onPressed: () => Navigator.of(context).pushNamed(
+                          TeachingStaffsDetail.route,
+                          arguments: {'dept': args, 'staff': data}),
                       style: ElevatedButton.styleFrom(
                           primary: Colors.white24,
                           shape: const RoundedRectangleBorder(

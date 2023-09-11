@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:kce_campus_connect/pages/department.dart';
 import 'package:kce_campus_connect/pages/department_data.dart';
 import 'package:kce_campus_connect/pages/hod_page.dart';
+import 'package:kce_campus_connect/pages/staffs_details_page.dart';
 import 'package:kce_campus_connect/pages/teaching_staffs_page.dart';
 import 'firebase_options.dart';
 void main() async {
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         DepartmentData.route: (ctx) => DepartmentData(),
         Hod.route: (ctx) => Hod(),
         TeachingStaffsPage.route: (ctx) => TeachingStaffsPage(),
+        TeachingStaffsDetail.route: (ctx) => TeachingStaffsDetail(),
       },
     );
   }
