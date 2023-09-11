@@ -78,7 +78,7 @@ class TeachingStaffsDetail extends StatelessWidget {
                     const SizedBox(height: 10),
                     const Center(
                         child: Text(
-                      'HoD Details',
+                      'Staff Details',
                       style: TextStyle(fontSize: 20),
                     )),
                     const SizedBox(height: 70),
