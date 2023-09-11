@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kce_campus_connect/pages/hod_page.dart';
+import 'package:kce_campus_connect/pages/teaching_staffs_page.dart';
 
 class DepartmentData extends StatelessWidget {
   // final String departmentName;
@@ -44,7 +45,7 @@ class DepartmentData extends StatelessWidget {
           const SizedBox(height: 20.0,),
           _button('HOD', () => Navigator.of(context).pushNamed(Hod.route, arguments:  departmentName)),
           const SizedBox(height: 30.0),
-          _button('TEACHING STAFFS', () => Navigator.of(context).pushNamed('')),
+          _button('TEACHING STAFFS', () => Navigator.of(context).pushNamed(TeachingStaffsPage.route, arguments: departmentName)),
           const SizedBox(height: 30.0),
           _button(
               'NON TEACHING STAFFS', () => Navigator.of(context).pushNamed('')),
