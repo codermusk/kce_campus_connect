@@ -48,7 +48,6 @@ class Hod extends StatelessWidget {
               }
               return Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: SingleChildScrollView(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -138,32 +137,38 @@ class Hod extends StatelessWidget {
                         style:
                             TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                       )),
-                      SingleChildScrollView(
-                          child: ListView.builder(
-                              shrinkWrap: true,
-                              itemCount: snapshot.data['classes'].length,
-                              itemBuilder: (context, index) {
-                                return Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: ElevatedButton(
-                                    onPressed: () {},
-                                    style: ElevatedButton.styleFrom(
-                                        primary: Colors.grey,
-                                        shape: const RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(10)))),
-                                    child: Text(
-                                      snapshot.data['classes'][index],
-                                      style: const TextStyle(
-                                          color: Colors.white, fontSize: 20),
-                                    ),
-                                  ),
-                                );
-                              }),
-                        ),
+                        Expanded(
+                        child: SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                ListView.builder(
+                                    shrinkWrap: true,
+                                    physics: NeverScrollableScrollPhysics(),
+                                    itemCount: snapshot.data['classes'].length,
+                                    itemBuilder: (context, index) {
+                                      return Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: ElevatedButton(
+                                          onPressed: () {},
+                                          style: ElevatedButton.styleFrom(
+                                              primary: Colors.grey,
+                                              shape: const RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.all(
+                                                      Radius.circular(10)))),
+                                          child: Text(
+                                            snapshot.data['classes'][index],
+                                            style: const TextStyle(
+                                                color: Colors.white, fontSize: 20),
+                                          ),
+                                        ),
+                                      );
+                                    }),
+                              ],
+                            ),
+                          ),
+                      ),
                     ],
                   ),
-                ),
               );
             }));
   }
